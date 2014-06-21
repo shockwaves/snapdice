@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head><title>2Dice</title>
+<meta charset="utf-8">
+<meta name="dice">
+<link rel="stylesheet" href="css/style.css">
+<script src='js/jquery.js'></script>
+<script src='js/core.js'></script>
+<script src='js/game.js'></script>
+<script src='js/dice.js'></script>
+</head><body><main>
+	<section id='results'>
+		<dl class='game'>
+			<h3>Игра</h3>
+			<dt>счет</dt>
+			<dd class='score'>0</dd>
+			<dt>время</dt>
+			<dd class='time'>0</dd>
+			<dt>ходы</dt>
+			<dd class='hits'>0</dd>
+			<dt>броски</dt>
+			<dd class='drops'>0</dd>
+			<dt>дубли</dt>
+			<dd class='doubles'>0</dd>
+			<br><br>
+			<button id='reset'>СБРОС</button>
+		</dl>
+	</section>
+	<section id='board'>
+		<article>-</article>
+		<article>-</article>
+	</section>
+	<section id='players'>
+		<article>Андрей</article>
+		<article>Артем</article>
+	</section>
+	<button id='start'>СТАРТ</button>
+	<button id='drop'>БРОСОК</button>
+	<button id='score'>РЕЗУЛЬТАТЫ</button>
+	<button id='back'>ВЕРНУТЬСЯ</button>
+</main></body>
+<script src='js/app.js'></script>
+</script></html>
