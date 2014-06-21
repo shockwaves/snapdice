@@ -1,4 +1,5 @@
 dice = {};
+dice.min = 1;
 dice.max = 6;
 dice.init = function() {
 	this.all = $('#board article');
