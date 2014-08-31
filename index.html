@@ -1,42 +1,95 @@
 <!DOCTYPE html>
-<html><head><title>2Dice</title>
+<html><head>
+<title>snapdice</title>
 <meta charset="utf-8">
-<meta name="dice">
-<link rel="stylesheet" href="css/style.css">
-<script src='js/jquery.js'></script>
-<script src='js/core.js'></script>
-<script src='js/game.js'></script>
-<script src='js/dice.js'></script>
-</head><body><main>
-	<section id='results'>
-		<dl class='game'>
-			<h3>Игра</h3>
-			<dt>счет</dt>
-			<dd class='score'>0</dd>
-			<dt>время</dt>
-			<dd class='time'>0</dd>
-			<dt>ходы</dt>
-			<dd class='hits'>0</dd>
-			<dt>броски</dt>
-			<dd class='drops'>0</dd>
-			<dt>дубли</dt>
-			<dd class='doubles'>0</dd>
-			<br><br>
-			<button id='reset'>СБРОС</button>
-		</dl>
-	</section>
-	<section id='board'>
-		<article>-</article>
-		<article>-</article>
-	</section>
-	<section id='players'>
-		<article>Андрей</article>
-		<article>Артем</article>
-	</section>
-	<button id='start'>СТАРТ</button>
-	<button id='drop'>БРОСОК</button>
-	<button id='score'>РЕЗУЛЬТАТЫ</button>
-	<button id='back'>ВЕРНУТЬСЯ</button>
-</main></body>
-<script src='js/app.js'></script>
-</script></html>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" name="viewport">
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/game.css"> 	
+</head><body>
+<!-- Панели -->
+<!-- Главное Меню -->
+<aside class='left'>
+	<button data-rel='active'>2</button>
+	<button data-rel='play'>∆</button>
+	<button data-rel='results'>
+            <ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+	</button>
+	<button data-rel='back'><</button>
+</aside>
+<!-- /Главное Меню -->
+<aside class="right"> 
+	<button data-rel='fixed'>√</button> 
+</aside> 	
+<!-- /Панели -->
+<!--  Доска -->
+<section id='board'>
+	<button data-rel='drop'>бросок</button>
+	<button data-rel='name'></button>
+	<button data-rel='face' value=0 >-</button>
+	<button data-rel='face' value=1 >-</button>
+</section>
+<!-- /Доска -->
+<!-- Результаты -->
+<section id='results'>
+    <h3>Игра</h3>
+    <dl>
+        <dt>время</dt><dd data-rel='time'>0</dd>
+        <dt>очки</dt><dd data-rel='score'>0</dd>
+        <dt>ходы</dt><dd data-rel='hits'>0</dd>
+        <dt>броски</dt><dd data-rel='drops'>0</dd>
+        <dt>дубли</dt><dd data-rel='doubles'>0</dd>
+        <dt>игрок#1</dt><dd data-rel='player1'>0</dd>
+        <dt>игрок#2</dt><dd data-rel='player2'>0</dd>
+    </dl>
+    <h3>Грани</h3>
+    <dl>
+        <dt>[1]</dt><dd data-rel='face1'>0</dd>
+        <dt>[2]</dt><dd data-rel='face2'>0</dd>
+        <dt>[3]</dt><dd data-rel='face3'>0</dd>
+        <dt>[4]</dt><dd data-rel='face4'>0</dd>
+        <dt>[5]</dt><dd data-rel='face5'>0</dd>
+        <dt>[6]</dt><dd data-rel='face6'>0</dd>
+    </dl>
+    <nav>
+        <button data-rel='players'>имя игрока</button>
+        <button data-rel='reset'>сброс</button>
+    </nav>
+</section>	
+<!-- /Результаты -->
+<!-- Розыгрыш -->
+<section id='drawing'>
+	<div class='player'>
+		<button data-rel='name' value=0 ></button>
+		<button data-rel='face' value=0 >-</button>
+		<button data-rel='chance' value=0 >бросок</button>
+	</div>
+	<div class='player'>
+		<button data-rel='name' value=1 ></button>
+		<button data-rel='face' value=1 >-</button>
+		<button data-rel='chance' value=1 >бросок</button>
+	</div>
+	<button data-rel='start'>начать</button>
+	<button data-rel='drawing'>розыгрыш</button>
+</section>
+<!-- /Розыгрыш -->
+<!-- Профиль -->
+<section id='profile'>
+	<label>игрок #<b>1</b></label>
+	<input type='text' class='name' placeholder='имя'>
+	<button data-rel='save'>сохранить</button> 	
+</section>	
+<!-- /Профиль -->
+<!-- Ошибка -->
+<section id='error'>
+	<img src='resources/will-smith.gif'>
+</section>
+<!-- /Ошибка -->
+<br>
+<script src='libraries/jquery.js'></script>
+<script src="libraries/gyro.min.js"></script>
+<script src='models/core.js'></script>
+<script src='models/app.js'></script>
+<script src='models/player.js'></script>
+<script src='models/dice.js'></script>
+<script src='models/game.js'></script>
+</body></html>

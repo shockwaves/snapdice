@@ -1,0 +1,107 @@
+* {
+	margin:0;
+	padding:0;
+	border: 0;
+	-webkit-user-select: none;
+}
+
+ html, body, main { 
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: 'monospace';
+	background-image: url('../resources/aside.png');
+	background-repeat: no-repeat;
+	background-color: black;
+	background-position: 0 center;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	align-content: center;
+	overflow: auto;
+}
+
+main {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	align-content: center;
+	overflow: auto;
+}
+
+section {
+	width: 100%;
+}
+
+iframe {
+	display: none;
+}
+
+aside {
+	position: absolute;
+	top: 0;
+	max-width: 65px;
+	height: 100%;
+	font-size: 0;
+	background: rgba(0,0,0, .5); 
+	z-index: 1;
+}
+
+aside.right {
+	right: 0;
+}
+
+aside button {
+	display: block;
+	width: 65px;
+	padding: 40px 0;
+	font-family: 'monospace';
+	font-weight: bold;
+}
+
+label, input {
+	display: block;
+}
+
+img {
+	display: inline-block;
+}
+
+nav {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+button {
+	position: relative;
+	display: inline-block;
+	border: 0;
+	border-radius: 0;
+	margin: 0;
+	padding: 40px 0;
+	width: 100%;
+	font-size: 60px;
+	color: #fff;
+	outline: 0;
+	background-color: transparent;
+	text-transform: uppercase;
+	/* transition: 1s; */
+} 
+
+button:active {
+	outline: 0;
+	color: #fff !important;
+	background-color: #DB7317 !important;	
+	opacity: 1;
+}
+
+button::-moz-focus-inner { border: 0; }
+
+br {
+	display: none;
+	clear: both;
+}
