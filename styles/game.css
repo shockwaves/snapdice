@@ -1,260 +1,260 @@
 /*
-	Доска
+        Доска
 */
 #board {
-	width: 100%;
-	background: rgba(0,0,0, .9); 
+    width: 100%;
+    background: rgba(0,0,0, .9); 
+    overflow: hidden;
 }
 
 /*
-	Результаты
+        Результаты
 */
 #results {
-	width: 100%;
-	height: 100%;
-	color: white;
-	background-color: #004e6b;
-	font-size: 20px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #004e6b;
+    font-size: 20px;
 }
 
 #results dl {
-	margin: 0 auto;
-	width: 40%;
-	overflow:auto;
+    margin: 0 auto;
+    width: 40%;
+    overflow:auto;
 }
 
 #results #face {
-	width: 20%;
+    width: 20%;
 }
 
-#results dl h3 {
-	margin-top: 25px;
-	padding-bottom: 10px;
-	text-align: center;
-	color: #0f0;
+#results h3 {
+    margin-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #0f0;
 }
 
 #results dt, dd {
-	float: left;
-	display: inline-block;
-	width: 50%;
+    float: left;
+    display: inline-block;
+    width: 50%;
 }
 
 #results dt {
-	text-align: left;
+    text-align: left;
 }
 
 #results dd {
-	text-align: right;
+    text-align: right;
 }
 
 #results dt:after {
-	content: ':';
-	font-size: 20px;
+    content: ':';
+    font-size: 20px;
 }
 
 /*
-	Профиль
+        Профиль
 */
 #profile {
-	padding: 20px 0;
-	width: 100%;
-	font-size: 0;
+    width: 100%;
+    font-size: 0;
 }
 
 #profile article {
-	text-align: center;
-	font-size: 1000%;
-	color: #00ff00;
+    text-align: center;
+    font-size: 1000%;
+    color: #00ff00;
 }
 
 #profile label {
-	font-size: 70px;
-	color: #fff;
-	text-align: center;
-	text-transform: uppercase;
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 #profile input {
-	margin: 25px auto;
-	padding: 10px;
-	width: 50%;
-	font-size: 50px;
-	text-transform: capitalize;
-	text-align: center;
+    margin: 25px auto;
+    padding: 10px;
+    width: 50%;
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
 }
 
 /*
-	Розыгрыш
+        Розыгрыш
 */
 #drawing {
-	font-size: 0;
+    font-size: 0;
 }
 
 #drawing div {
-	float: left;
-	display: inline-block;
-	width: 50%;
-	font-size: 8pt;
+    float: left;
+    display: inline-block;
+    width: 50%;
+    font-size: 8pt;
 }
 
 #error {
-	height: 100%;
-	text-align: center;
-	background-color: #000;
+    height: 100%;
+    text-align: center;
+    background-color: #000;
 }
 
 /*
-	Кнопки
+        Кнопки
 */
 
 .hit {
-	background-color: #155900;
+    background-color: #155900;
 }
 
 button[data-rel='face'], 
 .face {
-	display: none;
-	float: left;
-	padding: 0 30px;
-	width: 50%;
-	font-size: 1160%;
-	text-align: center;
-	color: #3BBA13;
-	border-color: #3BBA13;
+    display: none;
+    /*float: left;*/
+    padding: 0 30px;
+    width: 49%;
+    font-size: 1160%;
+    text-align: center;
+    color: #3BBA13;
+    border-color: #3BBA13;
 }
 
 button[data-rel='face'][value='0'] {
-	border-right-width: 1px;
-	border-style: solid;
-	text-align: right;
-	border: none;
+    border-right-width: 1px;
+    border-style: solid;
+    text-align: right;
+    border: none;
 }
 
 button[data-rel='face'][value='1'] {
-	 text-align: left;
+    text-align: left;
 }
 
 #drawing button[data-rel='face'] {
-	padding: 0;
-	width: 100%;
-	background: rgba(0,0,0, .9); 
-	text-align: center;
+    padding: 0;
+    width: 100%;
+    background: rgba(0,0,0, .9); 
+    text-align: center;
 }
 
 button[data-rel='results'] {
-	height: 130px;
-	background-color: #004e6b; 
+    height: 130px;
+    background-color: #004e6b; 
 }
 
 button[data-rel='results'] ul {
-	position: absolute;
-	margin: auto;
-	bottom: 0;top:0;left:0;right:0;
-	width: 80%;
-	height: 70%;
+    position: absolute;
+    margin: auto;
+    bottom: 0;top:0;left:0;right:0;
+    width: 80%;
+    height: 70%;
 }
 
 button[data-rel='results'] li {
-	display: inline-block;
-	border-right: 3px solid #fff;
-	height: 100%;
-	width: 3px;
+    display: inline-block;
+    border-right: 3px solid #fff;
+    height: 100%;
+    width: 3px;
 }
 
 button[data-rel='results'] li:nth-child(1) {
-	margin-left: -6px;
-	height: 20%;
+    margin-left: -6px;
+    height: 20%;
 }
 button[data-rel='results'] li:nth-child(2) {
-	height: 40%;
+    height: 40%;
 }
 button[data-rel='results'] li:nth-child(3) {
-	height: 70%;
+    height: 70%;
 }
 button[data-rel='results'] li:nth-child(4) {
-	height: 50%;
+    height: 50%;
 }
 button[data-rel='results'] li:nth-child(5) {
-	height: 60%;
+    height: 60%;
 }
 button[data-rel='results'] li:nth-child(6) {
-	height: 80%;
+    height: 80%;
 }
 
 button[data-rel='fixed'] {
-	height: 100%;
-	right: 0;
-	background-color: #00a600;
+    height: 100%;
+    right: 0;
+    background-color: #00a600;
 }
 
 button[data-rel='active'] {
-	padding: 0;
+    padding: 0;
 }
 
 button[data-rel='play'] {
-	position: absolute;
-	bottom: 0;
-	padding: 0;
-	background-color: #fff;
-	color: #f00;
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #f00;
 }
 
 button[data-rel='start'] {
-	background-color: #AB0000;
+    background-color: #AB0000;
 }
 
 button[data-rel='drawing'] {
-	background-color: #AB0000;
+    background-color: #AB0000;
 }
 
 button[data-rel='drop'],
 button[data-rel='chance'] {
-	background-color: #AB0000;
+    background-color: #AB0000;
 }
 
 button[data-rel='back'] {
-	background-color: #00a600;
+    background-color: #00a600;
 }
 
 button[data-rel='save'] {
-	padding: 20px;
-	background-color: #AB0000;
+    padding: 20px;
+    background-color: #AB0000;
 }
 
 button[data-rel='name'],
 .name {
-	text-transform: capitalize;
-	color: #f00;
-	background: rgba(0,0,0, .9); 
+    text-transform: capitalize;
+    color: #f00;
+    background: rgba(0,0,0, .9); 
 }
 
 button[data-rel='close'] {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 10px;
-	background-color: #0f0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #0f0;
 }
 
 button[data-rel='players'] {
-	background-color: #666;
+    background-color: #666;
 }
 
 button[data-rel='reset'] {
-	background-color: #f70000;
+    background-color: #f70000;
 }
 
 button[data-rel='reset'],
 button[data-rel='players'] {
-	padding: 10px;
-	font-size: 40px;
+    padding: 10px;
+    font-size: 40px;
 }
 
 /*
 section,
 aside button,
 button {
-	display: none;
+        display: none;
 }
 */
